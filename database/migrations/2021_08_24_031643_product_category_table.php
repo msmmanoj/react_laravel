@@ -17,7 +17,7 @@ class ProductCategoryTable extends Migration
         Schema::create('product_category', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('name');
-            $table->timestamp('created_at')->useCurrent();
+            $table->timestamps();
         });
 
         DB::table('product_category')->insert([
